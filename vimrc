@@ -2,7 +2,7 @@
 " General
 """"""""""""""""""""
 " Set how many lines of history VIM has to remember
-set history=200
+set history=1000
 " use mouse
 set mouse=a
 " Not compatibe with Vi
@@ -18,21 +18,21 @@ autocmd FocusGained,BufEnter * checktime
 """"""""""""""""""""
 " VIM user interface
 """"""""""""""""""""
-" Show line number
-set number
+" Show relative line number
+set relativenumber
 " Show current mode
 set showmode
 " Show command
 set showcmd
 " Show cursor position
 set ruler
-" Turn on the wild menu
-set wildmenu
+" Highlight current line
+set cursorline
 " Ignore case when searching
 set ignorecase
 " When searching try to be smart about cases
 set smartcase
-" Hightlight search results
+" Highlight search results
 set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
@@ -40,6 +40,7 @@ set incsearch
 set showmatch
 " Set utf8 as standard encoding
 set encoding=utf-8
+
 
 """"""""""""""""""""
 " Text, tab and indent related
@@ -64,6 +65,23 @@ set sts=4
 au FileType html setl sw=2 ts=2 sts=2 et
 au FileType css setl sw=2 ts=2 sts=2 et
 au FileType javascript setl sw=2 ts=2 sts=2 et
+
+
+""""""""""""""""""""
+" Autocomplete
+""""""""""""""""""""
+" Turn on the wild menu
+set wildmenu
+set wildmode=full
+" Turn on spell check
+set spell
+" Complete brackets
+" inoremap ' ''<ESC>i
+" inoremap " ""<ESC>i
+" inoremap ( ()<ESC>i
+" inoremap [ []<ESC>i
+" inoremap { {<CR>}<ESC>O
+
 
 """"""""""""""""""""
 " Colors
